@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button, Navbar } from 'flowbite-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
+    const path = useLocation().pathname;
     return (
         <Navbar className='border-b-2'>
             <Link to="/" className='image-logo px-2'>
@@ -14,21 +15,23 @@ export default function Header() {
                 </Link>
             </div>
             <div className='flex gap-10 ml-[-300px] font-bold'>
-                <Navbar.Link >
-                    <Link to="/">Home</Link>
-                </Navbar.Link>
+            
                 <Navbar.Link>
+                    <Link to="/" >Home</Link>
+                </Navbar.Link>
+                <Navbar.Link active={path === '/about'} as={'div'}>
                     <Link to="/about">AboutUs</Link>
                 </Navbar.Link>
-                <Navbar.Link>
+                <Navbar.Link active={path === '/projects'} as={'div'}>
                     <Link to="/projects">Projects</Link>
                 </Navbar.Link>
-                <Navbar.Link>
+                <Navbar.Link active={path === '/blogs'} as={'div'}>
                     <Link to="/blogs">Blogs</Link>
                 </Navbar.Link>
-                <Navbar.Link>
+                <Navbar.Link active={path === '/blogs'} as={'div'}>
                     <Link to="/blogs">Records</Link>
                 </Navbar.Link>
+               
             </div>
         </Navbar>
     )
