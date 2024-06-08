@@ -59,13 +59,13 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-2xl mt-8 md:mt-0">
-        <iframe 
-      src="https://www.youtube.com/embed/W5IfF8ZyMGI" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      className="w-full h-96" 
-    ></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/W5IfF8ZyMGI"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            className="w-full h-96"
+          ></iframe>
         </div>
       </div>
       <section className="py-12 bg-gray-50">
